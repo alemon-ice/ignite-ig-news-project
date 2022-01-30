@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { ActiveLink } from '../components/ActiveLink';
+import { ActiveLink } from '../../components/ActiveLink';
 
 jest.mock('next/router', () => {
   return {
@@ -13,7 +13,7 @@ jest.mock('next/router', () => {
 
 describe('ActiveLink component', () => {
   it('renders correctly', () => {
-    const { debug, getByText } = render(
+    const { getByText } = render(
       <ActiveLink href="/" activeClassName="active">
         <a>Navigate</a>
       </ActiveLink>
