@@ -8,4 +8,13 @@ module.exports = {
   moduleNameMapper: {
     '\\.(scss|css|sass)$': 'identity-obj-proxy',
   },
+  collectCoverage: true,
+  collectCoverageFrom: [
+    'src/**/*.tsx',
+    '!src/**/_app.tsx',
+    '!src/**/_document.tsx',
+    '!src/tests',
+    '!src/api',
+  ],
+  coverageReporters: ['lcov', 'json'],
 };
